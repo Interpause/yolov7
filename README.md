@@ -135,6 +135,14 @@ python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inferen
     </a>
 </div>
 
+## Export
+
+As of 20220716, YOLOv7 is still quite immature. See <https://github.com/WongKinYiu/yolov7/pull/57> and <https://github.com/WongKinYiu/yolov7/issues/66> on how to fix ONNX export.
+
+```sh
+python export.py --weights yolov7.pt --simplify --grid
+```
+
 ## Citation
 
 ```
