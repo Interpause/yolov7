@@ -190,6 +190,15 @@ python ./tensorrt-python/export.py -o yolov7-tiny.onnx -e yolov7-tiny-nms.trt -p
 
 Tested with: Python 3.7.13, Pytorch 1.12.0+cu113
 
+### Without post-processing
+
+As of 20220716, YOLOv7 is still quite immature. See <https://github.com/WongKinYiu/yolov7/pull/57> and <https://github.com/WongKinYiu/yolov7/issues/66> on how to fix ONNX export.
+
+As of 20220731, they fixed exporting, nonetheless command below useful to keep in mind (including post-processing incompatible with code that contains it).
+
+```sh
+python export.py --weights yolov7.pt --simplify --grid --img-size 640
+```
 
 ## Citation
 
